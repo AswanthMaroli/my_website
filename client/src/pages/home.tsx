@@ -400,22 +400,20 @@ export default function HomePage() {
           <SectionTitle
             eyebrow="About"
             title="Quality engineering, not just testing"
-            description="A concise snapshot you can keep updating as your impact grows."
+            description="I treat quality as an engineering problem, not a checkbox—breaking systems early to ship faster with absolute confidence."
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             <Card className="lg:col-span-7 rounded-3xl border-border/70 bg-card/55 backdrop-blur-xl p-6 sm:p-8">
               <div data-testid="text-about" className="text-sm sm:text-[15px] leading-relaxed text-foreground/70">
                 <p>
-                  I focus on building automation that catches high-impact issues early, stays reliable in CI, and makes releases feel
-                  boring (in the best way).
+                  I specialize in building intelligent automation frameworks that catch high-impact defects before they ever touch production. My approach makes releases feel <strong>boring</strong>—exactly how a stable deployment should be.
                 </p>
                 <p className="mt-4">
-                  I’ve worked across CMS workflows, incident & call management systems, financial document tools, and event-driven
-                  apps — partnering closely with devs in Agile teams.
+                  With 3+ years of experience across high-stakes domains—from CMS and financial tools to incident management—I partner closely with Agile teams to bake quality into the core of the development lifecycle.
                 </p>
                 <p className="mt-4">
-                  My north star: reduce production defects, speed up regression, and give teams real signal from tests.
+                  My mission is simple: eliminate production regressions, accelerate release velocity, and provide stakeholders with clear, actionable signals through data-driven test reporting.
                 </p>
               </div>
             </Card>
