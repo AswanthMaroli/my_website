@@ -12,8 +12,15 @@ export function serveStatic(app: Express) {
     );
   }
 
-  // Serve attached assets
-  app.use("/attached_assets", express.static(attachedAssetsPath));
+  // Serve attached assets with correct headers for PDFs
+  app.use("/attached_assets", express.static(attachedAssetsPath, {
+    setHeaders: (res, filePath) => {
+      if (filePath.endsWith(".pdf")) {
+        res.set("Content-Type", "application/pdf");
+        res.set("Content-Disposition", "inline");
+      }
+    },
+  }));
 
   // Serve public directory
   app.use(express.static(distPath));

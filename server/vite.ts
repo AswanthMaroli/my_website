@@ -36,7 +36,14 @@ export async function setupVite(server: Server, app: Express) {
     "..",
     "attached_assets",
   );
-  app.use("/attached_assets", express.static(attachedAssetsPath));
+  app.use("/attached_assets", express.static(attachedAssetsPath, {
+    setHeaders: (res, filePath) => {
+      if (filePath.endsWith(".pdf")) {
+        res.set("Content-Type", "application/pdf");
+        res.set("Content-Disposition", "inline");
+      }
+    },
+  }));
 
   app.use(vite.middlewares);
 
