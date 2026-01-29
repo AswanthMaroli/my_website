@@ -26,7 +26,7 @@ const profile = {
   links: {
     linkedin: "https://www.linkedin.com/in/aswanthmaroli",
     github: "https://github.com/aswanthmaroli",
-    resumePdf: "/attached_assets/Profile_(1)_1769675191900.pdf",
+    resumePdf: "/attached_assets/ASWANTH_RESUME.pdf",
     email: "aswanthmaroli07@gmail.com",
   },
   skills: [
@@ -288,7 +288,7 @@ export default function HomePage() {
                   >
                     <Button className="gap-2">
                       <FileText className="size-4" strokeWidth={1.75} />
-                      View LinkedIn PDF
+                      View Resume
                       <ArrowUpRight className="size-4" strokeWidth={1.75} />
                     </Button>
                   </a>
@@ -312,7 +312,6 @@ export default function HomePage() {
                     >
                       Core stack
                     </div>
-                    <div className="text-xs text-foreground/55 font-mono">{"// easy to edit"}</div>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {profile.skills.map((s) => (
@@ -343,9 +342,7 @@ export default function HomePage() {
                       {profile.name}
                     </div>
                     <div className="mt-1 text-sm text-foreground/70">
-                      <span className="font-mono">aswanthmaroli</span>
-                      <span className="text-foreground/40">@</span>
-                      <span className="text-foreground/70">linkedin</span>
+                      <span className="font-mono">QA Automation Engineer</span>
                     </div>
                   </div>
 

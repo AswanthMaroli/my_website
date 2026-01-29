@@ -5,6 +5,7 @@ import viteConfig from "../vite.config";
 import fs from "fs";
 import path from "path";
 import { nanoid } from "nanoid";
+import express from "express";
 
 const viteLogger = createLogger();
 
@@ -28,6 +29,14 @@ export async function setupVite(server: Server, app: Express) {
     server: serverOptions,
     appType: "custom",
   });
+
+  // Serve attached assets before Vite middleware
+  const attachedAssetsPath = path.resolve(
+    import.meta.dirname,
+    "..",
+    "attached_assets",
+  );
+  app.use("/attached_assets", express.static(attachedAssetsPath));
 
   app.use(vite.middlewares);
 
